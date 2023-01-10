@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --font1: 'Fraunces', serif;
+    --font2: 'Montserrat', sans-serif;
+
+    --dark-cyan: hsl(158, 36%, 37%);
+    --darker-cyan: hsl(158, 36%, 17%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.card {
+    display: flex;
+    width: 600px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden; 
+    margin: auto;
+}
+
+.card__column {
+    width: 50%;
+}
+
+.card__column-2 {
+    padding: 30px;
+}
+
+.card__column-2 > * {
+    padding-bottom: 25px;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-type {
+    text-transform: uppercase;
+    font-family: var(--font2);
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.4em;
+    font-size: 0.75rem;
+}
+
+.product-title {
+    font-family: var(--font1);
+    color: var(--very-dark-blue);
+    line-height: 1;
+}
+
+.product-description {
+    font-family: var(--font2);
+    color: var(--dark-grayish-blue);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.price {
+    font-family: var(--font1);
+    color: var(--dark-cyan);
+    font-size: 2rem;
+}
+
+.price-nodiscount {
+    font-family: var(--font2);
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+    padding-left: 15px;
+    vertical-align: 40%;
+    font-size: 0.85rem;
+}
+
+.btn {
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 9px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__text {
+    font-family: var(--font2);
+    font-weight: bold;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.btn__icon + .btn__text {
+    padding-left: 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        max-width: calc(100% - 34px);
+    }
+
+    .card__column {
+        width: 100%;
+    }
+
+    .card__column-2 {
+        padding: 25px;
+    }
+
+    .card__column-2 > * {
+        padding-bottom: 15px;
+    }
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        background-color: var(--darker-cyan);
+    }
+}
